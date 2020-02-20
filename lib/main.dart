@@ -13,7 +13,7 @@ final _transactions = [
   Transaction(
     id: 't2',
     title: 'Conta de luz',
-    value: 110.00,
+    value: 110.89,
     date: DateTime.now(),
   ),
 ];
@@ -49,8 +49,24 @@ class MyHome extends StatelessWidget {
                 child: Row(
                   children: <Widget>[
                     Container(
+                      margin:  EdgeInsets.symmetric(
+                        horizontal: 15,
+                        vertical: 10
+                      ),
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: Colors.black,
+                          width: 2
+                        )
+                      ),
+                      padding: EdgeInsets.all(10),
                       child: Text(
-                        tr.value.toString()
+                        tr.value.toString(),
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                          color: Colors.purple
+                        ),
                       ),
                     ),
                     Column(

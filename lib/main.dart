@@ -19,19 +19,21 @@ class MyHome extends StatelessWidget {
       appBar: AppBar(
         title: Text('Despesas pessoais'),
       ),
-      body: Column(
-        //mainAxisAlignment: MainAxisAlignment.spaceAround,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: <Widget>[
-          Container(
-            width: double.infinity,
-            child: Card(
-              color: Colors.blue,
-              child: Text('Gráfico'),
-            ),
+      body: SingleChildScrollView(
+              child: Column(
+            //mainAxisAlignment: MainAxisAlignment.spaceAround,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: <Widget>[
+              Container(
+        width: double.infinity,
+        child: Card(
+          color: Colors.blue,
+          child: Text('Gráfico'),
+        ),
+              ),
+              TransactionUser(),
+            ],
           ),
-          TransactionUser(),
-        ],
       ),
     );
   }

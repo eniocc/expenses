@@ -60,8 +60,8 @@ class MyHome extends StatelessWidget {
                         )
                       ),
                       padding: EdgeInsets.all(10),
-                      child: Text(
-                        tr.value.toString(),
+                      child: Text(                        
+                        'R\$ ${tr.value.toStringAsFixed(2)}',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 20,
@@ -70,9 +70,20 @@ class MyHome extends StatelessWidget {
                       ),
                     ),
                     Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        Text(tr.title),
-                        Text(tr.date.toString())
+                        Text(
+                          tr.title,
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold
+                          ),
+                          ),
+                        Text(
+                          tr.date.toString(),
+                          style: TextStyle(
+                            color: Colors.black54
+                          ),)
                       ],
                     )
                   ],
